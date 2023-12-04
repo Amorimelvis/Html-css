@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <h1 style="color: rgb(209, 6, 50); text-align-last: center;">Preencha o Formulario</h1><!--Aqui começou a usar o css3-->
+
+    <p style="color: #370ab1; text-align: center;">Para preencher o <strong>formulario</strong> você deverá clicar nos campos </p>
+
+
+    <form action="pagina-processa-dados-form" method="post"> <!--Formulario Geral e tudo vai dentro-->
+
+        <fieldset><!--Serve para criar as bordas-->
+            <legend>Dados Gerais</legend>
+
+            <label for="nome">Nome:</label> 
+            <input type="text" minlength="3" id="nome" required>
+
+            <label for="data_nascimnto">Data de Nascimento:</label>
+            <input type="text" id="data_nascimnto">
+
+            <label for="cpf">CPF:</label>
+            <input type="cpf" minlength="11" id="cpf">
+            
+ 
+        </fieldset>
+
+        <fieldset>
+            <legend>Endereço</legend><!--Serve para criar campo de seleção-->
+
+            <label for="tipo_endereco">Tipo:</label>
+            <select id="tipo_endereco"><!--Aqui criou o select e detrno dele as opçoes-->
+            <option value="">Selecione</option>
+            <option value="">Rua</option>
+            <option value="">Estrada</option>
+            <option value="">Rodvia</option>
+            <option value="">Outros</option>
+
+        </select>
+
+        <label for="logradou_endereco">Logradouro</label>
+        <input type="text" id="logradou_endereco">
+
+        <label for="numero_endereço">Numero:</label>
+        <input type="text" id="numero_endereço">
+
+        <label for="complemento_endereço">Complemento</label>
+        <input type="text" id="complemento_endereço">
+
+        </fieldset>
+<fieldset>
+
+        <legend>Fale Conosco</legend>  
+        
+        <label for="msg">Mensagem:</label>
+        <textarea type="text" id="msg"></textarea> <!--Serve para criar o campo de digitação da mensagem no form-->
+
+</fieldset>
+
+
+        
+        <button type="submit">Enviar sua mensagem</button>
+        <button type="reset">Limpar o Formulario</button><br><br>
+
+       <fieldset style="background-color: aqua;">
+            <label for="usuario" required="usuario">Usuario</label><br>
+            <input type="text" id="usuario" name="usuario"><br>
+
+            <label for="pwd">Password</label><br>
+            <input type="password" id="pwd" name="pwd"><br><br>
+
+            <input type="submit" value="Enviar"><br>
+        </fieldset><br><br>
+
+<fieldset>
+
+    <label for="email">E-mail</label>        
+    <input type="email" id="email" name="email"
+            required="true"><br><br>
+<input type="submit"Enviar>
+
+
+</fieldset>
+
+
+        
+
+        
+    </form>
+    
+</body>
+</html>

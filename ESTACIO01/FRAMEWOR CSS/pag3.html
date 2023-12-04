@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botão com CSS e JavaScript</title>
+    <style>
+        /* Estilo CSS para o botão */
+        .custom-button {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Estilo CSS para o botão quando hover (passa o mouse por cima) */
+        .custom-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+
+    <script>
+        var a = 10.5;
+        let b = "XPTO";
+        const c = true;
+        a += 12;
+        if (a<=20){
+            a*=5;
+        }
+
+    </script>
+</head>
+<body>
+
+    
+    <button class="custom-button" id="myButton">Clique-me!</button>
+
+    <script>
+        // JavaScript para adicionar interatividade ao botão
+        const myButton = document.getElementById('myButton');
+
+        myButton.addEventListener('click', function() {
+            alert('Você clicou no botão!');
+        });
+    </script>
+</body>
+</html>

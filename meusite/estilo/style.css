@@ -1,0 +1,213 @@
+@charset "UTF-8"
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@font-face {
+    font-family: "Android";
+    src: url("/fontes/idroid.otf") format("opentype");
+    font-weight: normal;
+
+}
+
+
+:root{ /*aqui dentro é onde inserimos as variaves CSS*/
+    --cor01: #c5ebd6;
+    --cor02: #83e1ad;
+    --cor03: #3ddc84;
+    --cor04: #2fa866;
+    --cor05: #1a5c37;
+    --cor06: #063d1e;
+
+    --fonte-padrao: arial verdana helvetica sans-serif;
+    --fonte-destaque:  'Bebas Neue', sans-serif;
+    --fonte-android: "Andoird" , "cursive";
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: var(--cor01);
+    font-family: var(--fonte-padrao);
+    }
+
+a.externo::after{/*Esse comando serve para chamar a classe "EXTERNO" e o after vai inserir depois do texto*/
+    content: "\1F517\00A0";
+
+}
+
+
+header{
+
+    min-height: 150px;
+    text-align: center;
+    padding-top: 40px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.438);
+    background-image: linear-gradient(to bottom, var(--cor03), var(--cor05));
+}
+
+header > h1{
+    color: white;
+    font-family: var(--fonte-padrao);
+    font-size: 3em;
+    margin-bottom: 20px;
+    font-family: var(--fonte-destaque);
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.445);
+}
+
+header > p{
+    font-family: var(--fonte-padrao);
+    font-size: 1.5em;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.37);
+    max-width: 600px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin: auto;
+    color: white;
+}
+
+nav{
+    background-color: var(--cor05);
+    padding: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.486);
+    margin-top: 15px;
+
+}
+
+nav > a{
+    color: white;
+    padding: 10px;
+    border-radius: 3px;
+    transition-duration: .5s; /*Serve para inserir a interação de transição*/
+    text-decoration: none;/*Para perder o sublinhado do link*/
+    font-weight: bold;
+}
+
+nav > a:hover{ /*Quando passar o mouse, ele cria uma interação no menu, fazendo mudar a cor assim que o mouse passa por cima*/
+
+    background-color: var(--cor02);
+    color: var(--cor05);
+
+}
+
+main{
+
+    min-width: 300px;
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+    margin-bottom: 30px;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.397);
+}
+
+main p{
+    margin: 15px 0px;
+    text-align: justify;
+    text-indent: 30px; /*Aqui seria pra colorar o recuo da primeira letra do texto no paragrafo do texto*/
+    line-height: 1.5em;/* isso serve para dar espaçamento no texto*/
+    font-size: 1em;
+}
+
+main strong{
+    color: var(--cor04);
+    font-weight: bold;
+    
+}
+
+main a{
+    text-decoration: none;
+    font-size: bold;
+    color: var(--cor05);
+    background-color: var(--cor01);
+    padding: 2px 6px;
+
+}
+
+main a:hover{
+    text-decoration: underline;
+    color: var(--cor04);
+}
+
+main img{
+    width: 100%;
+}
+
+main img.pequena{
+    max-width: 350px;
+    display: block;
+    margin: auto;
+}
+
+main h1{
+    color: var(--cor05);
+    font-family: var(--fonte-android);
+}
+
+main h2{
+    font-family: var(--fonte-android);
+    color: var(--cor04);
+    font-size: 2em;
+    
+
+}
+
+div.video{
+    background-color: var(--cor06);
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+    padding-bottom: 59%;
+    position: relative;
+
+}
+
+div.video > iframe{
+
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+
+
+aside{
+
+    background-color: var(--cor01);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.39);
+}
+
+aside > h3{
+    background-color: var(--cor06);
+    color: white;
+        padding: 10px;
+    margin: -10px -10px 0px -10px; /*serve para aredandar o h3 que é titulo*/
+    border-radius: 10px 10px 0px 0px; /*serve para aredanda apenas os cantos superiores */
+}
+aside > ul{ /* Serve para colocar a bolinha marcadora para o lado de dentro */
+    list-style-position: inside;
+    list-style-type: "\2714\00A0\00A0"; /*SERVE PARA COLOCAR O CHECK DO SITE EMOGE E 00A0 É O ESPAÇO PARA LETRA*/
+    columns: 2;
+}
+
+footer{
+    background-color: var(--cor05);
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px;
+}
+
+footer p a{
+    color: var(--cor03);
+    text-decoration: none;
+}
+
+footer a:hover{
+    color: #83e1ad;
+    text-decoration: underline;
+}
